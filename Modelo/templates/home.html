@@ -1,0 +1,99 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/estilo.css' %}">
+    <title>CineResenhas</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'sobreosite' %}">sobre o Site</a></li>
+            <li><a href="{% url 'suporte'%}">Suporte</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    <h1>Site de Resenhas</h1>
+    <h2>Seja bem-vindo ao melhor site de resenhas. Assista filmes e séries e deixe seu feedback para movimentar cada vez mais nossa comunidade</h2>
+    <figure class="imagens-container">
+        <div class="campoImagem">
+            <img src="{% static 'imagens/avatar.jpg' %}" alt="Avatar">
+            <p>Avatar</p>
+        </div>
+        
+        <div class="campoImagem">
+            <img src="{% static 'imagens/Avatar2.jpg' %}" alt="Avatar2">
+            <p>Avatar 2</p>
+        </div>
+    </figure>
+    
+    <figure class="imagens-container">
+        <div class="campoImagem">
+            <img src="{% static 'imagens/vingadores.jpg' %}" alt="Avatar">
+            <p>Vingadores: The Avengers</p>
+        </div>
+        
+        <div class="campoImagem">
+            <img src="{% static 'imagens/vingadores2.jpg' %}" alt="Avatar2">
+            <p>Vingadores: Era de Ultron</p>
+        </div>
+        <div class="campoImagem">
+            <img src="{% static 'imagens/vingadores3.jpg' %}" alt="Avatar">
+            <p>Vingadores: Guerra Infinita</p>
+        </div>
+        
+        <div class="campoImagem">
+            <img src="{% static 'imagens/vingadores4.jpg' %}" alt="Avatar2">
+            <p>Vingadores: Ultimato</p>
+        </div>
+    </figure>
+
+     <figure class="imagens-container">
+        <div class="campoImagem">
+            <img src="{% static 'imagens/Titanic.jpg' %}" alt="Avatar">
+            <p>Titanic (filme de 1997)</p>
+        </div>
+
+    </figure>
+{% endblock %}
+
+<footer>
+
+    <div class="social-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/walterlim_trajano/" target="_blank">Instagram</a>
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/walterlimtrajano" target="_blank">Github</a>
+        <!-- Adicione mais linhas para outras redes sociais -->
+    </div>
+    <p>&copy; 2023 Cine Resenhas. Todos os direitos reservados.</p>
+</footer>
+<style>        
+    footer {
+        margin-top: 100px;
+        background-color:blue;
+        color:white;
+        text-align: center;
+        padding: 1em;
+        bottom: 0;
+        width: 100%;
+    }
+    .social-icons {
+        text-align: center;
+        padding: 1em;
+        bottom: 0;
+        width: 100%;
+        font-size: 30px;
+    }
+    .social-icons a{
+        color: white;
+    }
+    </style>
+    <script src="https://kit.fontawesome.com/e72bcaf164.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
